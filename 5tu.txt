@@ -1,0 +1,10 @@
+clock
+block
+blade
+trump
+color
+great
+hello
+apple
+skill
+skull
