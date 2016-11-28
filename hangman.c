@@ -121,7 +121,6 @@ int main() {
   for(int i=0;i<so_tu;i++) b[i] = 42;
   f = nap_file(so_tu);
   lay_random_tu(f, tu);
-  printf("%s\n", tu);
   while(net_ve != max) {
     printf("%s\n", b);
     printf("\nDoan 1 ki tu: ");
