@@ -116,16 +116,25 @@ int main() {
   int max = 6;
   char nhap;
   int so_tu, dem;
+int ktra,i,j;
+char check[10],b[10];
   printf("\n\nBan muon chon bao nhieu tu? (4/5/6): ");
   scanf("%d", &so_tu);
-  for(int i=0;i<so_tu;i++) b[i] = 42;
-  f = nap_file(so_tu);
+  for(int i=0;i<so_tu;i++) 
+	  b[i] = 42;
+	f = nap_file(so_tu);
   lay_random_tu(f, tu);
   while(net_ve != max) {
     printf("%s\n", b);
     printf("\nDoan 1 ki tu: ");
-    getchar();
-    scanf("%c", &nhap);
+    i=0;i++;
+	  do{
+	ktra =0;
+	scanf("%c", &nhap); // chuong trinh chong nhap lai
+	check[i] = nhap;
+	for(j=i-1;j>=0;j--) if(check[i]==check[j]) ktra = 1; 
+	if(ktra == 1) printf("Da ton tai. Nhap ki tu khac: ");	
+	}while(ktra==1);
     if (hien_tu(nhap, so_tu) == 0) {
       dem++;
       if(dem == so_tu) {
